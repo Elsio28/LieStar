@@ -1,0 +1,224 @@
+*{
+	margin:0;
+	padding: 0;
+	color: white;
+}
+body{
+	overflow: hidden;
+	background-image: url('img/space_2.jpg');
+	background-position: 50% 50%; 
+	background-size: cover;
+}
+img{
+	display: none;
+}
+#principal_title{
+	transition: 6s;
+	/*transform: translateY(-1000px);*/
+	position: absolute;
+	left: 50px;
+	bottom: 50px;
+	background-image: url('img/sketches/Sketch_1.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	width: 450px;
+	height: 250px;
+}
+#principal_panel{
+	transition: 6s;
+	/*transform: translateY(-1000px);*/
+	position: absolute;
+	right: 50px;
+	width: 500px;
+}
+.play_panel{
+	background-image: url('img/graphic_elements/Sketch_7.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	/*opacity: 0.9;*/
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: 3s;
+	margin: 70px;
+}
+.play_panel:hover{
+	box-shadow: 0px 0px 70px 20px #343434;
+	transition: 3s;
+}
+.play_panel:active{
+  	box-shadow: 0px 0px 30px 0px #343434 inset;
+	transition: 1s;
+}
+#play_text{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 200px;
+	padding: 20px;
+	border-radius: 25px;
+	transition: 3s;
+	/*color: black;*/
+	font-size: 30px;
+	background-color: #4585BB;
+	text-align: center;
+	display: none;
+}
+
+.settings_panel{
+	margin: 70px;
+	background-image: url('img/graphic_elements/Sketch_9.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	opacity: 0.9;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: 3s;
+}
+.settings_panel:hover{
+	box-shadow: 0px 0px 70px 20px #343434;
+	transition: 3s;
+}
+.settings_panel:active{
+  	box-shadow: 0px 0px 30px 0px #343434 inset;
+	transition: 1s;
+}
+#settings_text{
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 200px;
+	padding: 20px;
+	border-radius: 25px;
+	transition: 3s;
+	/*color: black;*/
+	font-size: 30px;
+	background-color: #333333;
+	text-align: center;
+	display: none;
+}
+
+#settings{
+	left: 0;
+	top: 1000px;
+	position: absolute;
+	/*display: none;*/
+	width: 300px;
+	opacity: 0;
+	color: white;
+	text-align: center;
+	height: 500px;
+	border: 1px inset;
+	border-radius: 25px;
+	transition: 3s;
+	background-image: linear-gradient(to bottom, #0f2138, #162a45, #1e3453, #263d61, #2f476f, #344f7f, #39588f, #3f60a0, #4469b7, #4a71cd, #5379e4, #5f81fb);
+}
+.settings_exit{
+	top: 1000px;
+	position: absolute;
+	margin: 50px;
+	background-image: url('img/graphic_elements/Sketch_8.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: 3s;
+}
+.settings_exit:hover{
+	box-shadow: 0px 0px 70px 30px #5C5C5C;
+	transition: 3s;
+}
+.settings_exit:active{
+  	box-shadow: 0px 0px 30px 5px #5C5C5C inset;
+	transition: 1s;
+}
+#settings_exit_text{
+	top: 1000px;
+	left: 0;
+	position: absolute;
+	width: 200px;
+	padding: 20px;
+	border-radius: 25px;
+	transition: 3s;
+	/*color: black;*/
+	font-size: 30px;
+	background-color: #333333;
+	text-align: center;
+	display: none;
+}
+
+#missions{
+	left: 0;
+	top: -1000px;
+	position: absolute;
+	width: 600px;
+	color: white;
+	text-align: center;
+	height: 500px;
+	border: 1px inset;
+	transition: 3s;
+	opacity: 0;
+}
+.play_exit{
+	top: -150px;
+	left: 50px;
+	position: absolute;
+	/*margin: 50px;*/
+	background-image: url('img/sketches/Sketch_10.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	opacity: 0;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	transition: 3s;
+}
+.play_exit:hover{
+	box-shadow: 0px 0px 70px 30px #5C5C5C;
+	transition: 3s;
+}
+.play_exit:active{
+  	box-shadow: 0px 0px 30px 5px #5C5C5C inset;
+	transition: 1s;
+}
+#play_exit_text{
+	top: -1000px;
+	left: 0;
+	position: absolute;
+	width: 200px;
+	padding: 20px;
+	border-radius: 25px;
+	transition: 3s;
+	/*color: black;*/
+	font-size: 30px;
+	background-color: #333333;
+	text-align: center;
+	opacity: 0;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+.mission{
+	margin: 55px;
+	text-align: center;
+	font-size: 20pt;
+	width: 200px;
+	background-image: url('img/sketches/Sketch_11.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	transition: 3s;
+	border-radius: 5px;
+}
+.mission:hover{
+	box-shadow: 0px 0px 70px 20px #3D7F9D;
+	transition: 3s;
+}
+.mission:active{
+  	box-shadow: 0px 0px 30px 20px #3D7F9D inset;
+	transition: 1s;
+}

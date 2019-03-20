@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>LieStar</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="img/favicons/favicon_cruiser_b.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script type="text/javascript" src="index.js" defer></script>
+	<script type="text/javascript" src="js/settings.js" defer></script>
+</head>
+<body onselectstart="return false">
+<div id="play_exit_text">Down to main</div>
+<div class="play_exit" id="play_exit" onclick="up_to_missions(false)" onmouseenter="over_play_exit(true)" onmouseleave="over_play_exit(false)"></div>
+<div id="missions">
+	<h2>Missions</h2>
+	<a href="missions/tutorial.html"><div class="mission">Tutorial I</div></a>
+	<a href="missions/ChromAC.html"><div class="mission">Test mission</div></a>
+</div>
+
+
+<div id="principal_title"></div>
+<div id="play_text">Play</div>
+<div id="settings_text">Settings</div>
+<div id="principal_panel">
+	<div class="play_panel" id="play_panel" onmouseenter="over_play(true)" onmouseleave="over_play(false)" onclick="up_to_missions(true)"></div>
+	<div class="settings_panel" id="settings_panel" onmouseenter="over_settings(true)" onmouseleave="over_settings(false)" onclick="down_to_settings(true)"></div>
+</div>	
+
+<div id="settings_exit_text">Up to main</div>
+<div class="settings_exit" id="settings_exit" onclick="down_to_settings(false)" onmouseenter="over_settings_exit(true)" onmouseleave="over_settings_exit(false)"></div>
+<div id="settings">
+	<h2>Settings</h2>
+</div>
+</body>
+</html>

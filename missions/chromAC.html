@@ -1,0 +1,83 @@
+<html>
+<head>
+	<title>ChromAC</title>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" href="../img/favicons/favicon_pulsator.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../chromAC.css">
+	<script type="text/javascript" src="../js/victor.js"></script>
+	<script type="text/javascript" src="../js/settings.js"></script>
+	<script type="text/javascript" src="../js/ship.js"></script>
+	<script type="text/javascript" src="../js/shell.js"></script>
+	<script type="text/javascript" src="../js/void.js"></script>
+	<script type="text/javascript" src="../js/collision.js"></script>
+	<script type="text/javascript" src="../js/chromAC.js" defer></script>
+</head>
+<body onselectstart="return false" onmousedown="fire(event, true)" onmouseup="fire(event, false)" onkeypress="keyboard_signal(event)" onmousemove="cursor.move(event)" oncontextmenu="pulsar_launch(); return false;" onkeydown="key_down(event)">
+	<div id="statistic"></div>
+	<div class="health_bar" id="ship_health">100</div>
+	<div class="shield_bar" id="ship_shield">50</div>
+
+	<div id="inform"></div>
+	<div id="spaceship"></div>
+	<!-- <div id="dot_center" class="dot"></div> -->
+	<div id="dot4" class="dot"></div>
+	<div id="dot1" class="dot"></div>
+	<div id="dot2" class="dot"></div>
+	<div id="dot3" class="dot"></div>
+
+	<div id="space"></div>
+<script type="text/javascript">
+	var mission_code = 0;
+
+	var first_block = document.createElement('div');
+	inform.appendChild(first_block);
+	var second_block = document.createElement('div');
+	inform.appendChild(second_block);
+	
+	var i = 2;
+	function update_by_text(string) {
+		if (i == 1) {
+			i=2;
+			inform.removeChild(second_block);
+			first_block.style.opacity = 0;
+			first_block.style.transform = "translateY("+ document.documentElement.clientHeight +"px)";
+	
+			second_block = document.createElement('div');
+			inform.insertBefore(second_block, inform.firstChild);
+			second_block.className = "new_block";
+			second_block.innerHTML = string;
+			setTimeout("second_block.style.transform = \"translateY(100px)\";", 30);
+			setTimeout("second_block.style.opacity = 1;", 50);
+			setTimeout("second_block.style.transition = 5+\"s\";", 100);
+	
+		} else if (i == 2) {
+			i=1;
+			inform.removeChild(first_block);
+			second_block.style.opacity = 0;
+			second_block.style.transform = "translateY("+ document.documentElement.clientHeight +"px)";
+	
+			first_block = document.createElement('div');
+			inform.insertBefore(first_block, inform.firstChild);
+			first_block.className = "new_block";
+			
+			first_block.innerHTML = string;
+			setTimeout("first_block.style.transform = \"translateY(100px)\";", 30);
+			setTimeout("first_block.style.opacity = 1;", 50);
+			setTimeout("first_block.style.transition = 5+\"s\";", 100);
+		}
+	}
+	// setTimeout(add_text, 1000, "LieStar");
+	{
+		setTimeout(update_by_text, 1000, "<h3>Welcome to the LieStar!</h3>");
+		setTimeout(update_by_text, 5000, "<h3>Testing mission - ChromAC</h3>In the test mission, you can independently create enemies of all types and fight them.<br>You have infinite health.<br>Also here are the latest features of the game, not yet entered into the missions.");
+		setTimeout(update_by_text, 15000, "<h3>Commands</h3>Spawn enemies:<br> \"A\" - Pulsator, \"S\" - fighter, \"D\" - defender.<br> Press \"Esc\" to close this message.");
+	}
+
+	function key_down(evt) {
+		if (evt.keyCode == 27) {
+			update_by_text("");
+		}
+	}
+</script>
+</body>
+</html>

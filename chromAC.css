@@ -1,0 +1,177 @@
+*{
+	margin:0;
+	padding: 0;
+	color: white;
+/*	cursor: none;*/
+}
+body{
+	overflow: hidden;
+	background-image: url('img/space_1.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+}
+img{
+	display: none;
+}
+#statistic{
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-image: url('img/sketches/Sketch_5.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	width: 250px;
+	height: 150px;
+	z-index: 5;
+}
+#ship_health{
+	top: 10px;
+	left: 10px;
+	display: block;
+	z-index: 10;
+	text-align: center;
+	vertical-align: middle;
+	color: black;
+}
+#ship_shield{
+	top: 70px;
+	left: 100px;
+	display: block;
+	z-index: 10;
+	text-align: center;
+	vertical-align: middle;
+	color: black;
+}
+
+#inform{
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+	text-align: center;
+	font-family: monospace;
+	font-size: 16pt;
+	top: 0;
+}
+.new_block{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	opacity: 0;
+	transition: 7s;
+}
+#spaceship{
+	margin: 0;
+	padding-left: 20px;
+	padding-top: 20px;
+	position: absolute;
+	background-image: url('img/spaceships/spaceship_original.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	z-index: 100;
+	width: 80px;
+	height: 80px;
+}
+#space{
+	width: 100%;
+	height: 100%;
+}
+
+.explosion{
+	position: absolute;
+	background-position: 50% 50%; 
+	background-size: cover;
+	z-index: 75;
+	opacity: 0.3;
+}
+.allias_shell{
+	background-image: url('img/shells/beam_2.png');
+}
+.void_shell_light{
+	background-image: url('img/shells/beam_3.png');
+}
+.void_shell_heavy{
+	background-image: url('img/shells/beam_4.png');
+	width: 30px;
+	height: 40px;
+}
+.shell{
+	position: absolute;
+	background-position: 50% 50%;
+	background-size: cover;
+	width: 5px;
+	height: 5px;
+	z-index: 50;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.void_pulsar{
+	background-image: url('img/shells/pulsar_3.png');
+}
+.allias_pulsar{
+	background-image: url('img/shells/pulsar_2.png');
+}
+.pulsar{
+	position: absolute;
+	background-position: 50% 50%; 
+	background-size: cover;
+	width: 30px;
+	height: 60px;
+	z-index: 90;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+
+.void{
+	position: absolute;
+	background-position: 50% 50%; 
+	background-size: cover;
+	width: 40px;
+	height: 80px;
+	z-index: 100;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.laser_void{
+	background-image: url('img/voidships/void_6.png');
+}
+.pulsar_void{
+	background-image: url('img/voidships/void_7.png');
+}
+.defender_void{
+	background-image: url('img/voidships/void_8.png');
+	width: 120px;
+	height: 240px;
+}
+
+
+
+.dot{
+	position: absolute;
+	background-image: url('img/shells/sur_1.png');
+	background-position: 50% 50%; 
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+	z-index: 1000;
+}
+.health_bar{
+	z-index: 50;
+	position: absolute;
+	background-image: none;
+	background-color: #40BC77;
+	border-radius: 50%;
+	display: none;
+	padding-left: 20px;
+	padding-top: 20px;
+}
+.shield_bar{
+	z-index: 60;
+	position: absolute;
+	background-image: none;
+	background-color: #5297E5;
+	border-radius: 50%;
+	display: none;
+	padding-left: 20px;
+	padding-top: 20px;
+}
